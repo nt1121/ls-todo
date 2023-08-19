@@ -290,6 +290,12 @@ ul, p {
     padding: 10px;
     width: 90%;
     max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.p-how-to-use-modal__window-text {
+    margin-bottom: 20px;
 }
 
 /* Name Edit Modal */

@@ -6,6 +6,7 @@ export const TodoImportButton = memo(() => {
     const { setTodos } = useContext(StoreContext);
     const handleChange = (e) => {
         const fileReader = new FileReader();
+        const importButton = e.target;
         fileReader.addEventListener('load', (e) => {
             const todos = convertTodosJsonToArray(e.target.result);
             if (!todos) {
@@ -14,6 +15,8 @@ export const TodoImportButton = memo(() => {
             }
             saveTodosToLocalStorage(todos);
             setTodos(todos);
+            // ファイルの選択を解除する
+            importButton.value = '';
         });
         fileReader.readAsText(e.target.files[0]);
     };

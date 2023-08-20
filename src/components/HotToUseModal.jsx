@@ -6,6 +6,7 @@ export const HowToUseModal = memo(() => {
     const template = (
         <div className="p-how-to-use-modal">
             <div className="p-how-to-use-modal__window">
+                <div className="p-how-to-use-modal__window-heading">使い方</div>
                 <div className="p-how-to-use-modal__window-text">
                     <p className="u-mb-10">タスクの追加、タスクの完了と未完了状態の更新、タスク名の編集、タスクの削除が行えるTODOリストです。</p>
                     <p className="u-mb-10">変更はブラウザのローカルストレージに自動的に保存されます。</p>

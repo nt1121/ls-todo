@@ -28,6 +28,7 @@ export const TodoAddForm = memo(() => {
 
     return (
         <form className="p-todo-add-form" onSubmit={handleSubmit}>
+            <div className="p-todo-add-form__heading">タスクの追加</div>
             <input
                 type="text"
                 className="p-todo-add-form__input-text"

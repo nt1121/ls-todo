@@ -24,11 +24,13 @@ export const NameEditModal = memo(() => {
     const template = (
         <div className="p-name-edit-modal">
             <div className="p-name-edit-modal__window">
+                <div className="p-name-edit-modal__window-heading">タスク名の編集</div>
                 <input
                     type="text"
                     className="p-name-edit-modal__window-input-text"
                     value={editTodoNewName}
                     onChange={(e) => setEditTodoNewName(e.target.value)}
+                    maxLength="100"
                 />
                 <div>
                     <button className="c-button c-button--primary u-mr-10" onClick={changeTodoName}>変更</button>

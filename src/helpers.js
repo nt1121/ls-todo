@@ -27,6 +27,10 @@ export const convertTodosJsonToArray = (json) => {
         return false;
     }
 
+    if (todos.length > 100) {
+        return false;
+    }
+
     for (const todo of todos) {
         if (typeof todo !== "object") {
             return false;

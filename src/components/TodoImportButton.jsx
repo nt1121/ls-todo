@@ -5,6 +5,17 @@ import { convertTodosJsonToArray, saveTodosToLocalStorage } from "../helpers";
 export const TodoImportButton = memo(() => {
     const { setTodos } = useContext(StoreContext);
     const handleChange = (e) => {
+        const file = e.target.files[0];
+
+        if (!file) {
+            return;
+        }
+
+        if (file.type !== "text/plain") {
+            alert("インポート可能な形式のファイルではありません。");
+            return;
+        }
+
         const fileReader = new FileReader();
         const importButton = e.target;
         fileReader.addEventListener('load', (e) => {
@@ -18,7 +29,7 @@ export const TodoImportButton = memo(() => {
             // ファイルの選択を解除する
             importButton.value = '';
         });
-        fileReader.readAsText(e.target.files[0]);
+        fileReader.readAsText(file);
     };
 
     return (

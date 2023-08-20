@@ -13,7 +13,7 @@ export const HowToUseModal = memo(() => {
                     <p>インポートをした場合、ローカルストレージに保存されているTODOリストもインポートしたTODOリストに置き換えられます。</p>
                 </div>
                 <div>
-                    <button className="c-button" onClick={() => setIsHowToUseModalVisible(false)}>閉じる</button>
+                    <button className="c-button p-how-to-use-modal__window-close-button" onClick={() => setIsHowToUseModalVisible(false)}>閉じる</button>
                 </div>
             </div>
         </div>
